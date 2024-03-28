@@ -1,15 +1,16 @@
 cask "hancom-office" do
-  version "12.30.0.5542"
-  sha256 "98124f07e7950efea972737a2da63599e358c8a6ef5088e05f7f7825af7ea6d7"
+  version "12.30.0.5688"
+  sha256 "8caf71c07ae0ed3876b2ca1fd092ecaae0370d7b6b0826dcb7b1bba518567082"
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomOffice-general-#{version}.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
-  name "Hacom Office for Mac"
+  name "Hacom Docs"
   desc "Word processor"
   homepage "https://office.hancom.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://cdn.hancom.com/upd/HwpMac2022/HancomOfficeHWPDocs/hupdate_mac.ini"
+    regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "HancomOffice-general-#{version}.pkg"
