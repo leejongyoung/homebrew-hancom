@@ -1,4 +1,4 @@
-cask "hancom-office" do
+acask "hancom-word" do
   version "12.30.0.5688"
   sha256 "8caf71c07ae0ed3876b2ca1fd092ecaae0370d7b6b0826dcb7b1bba518567082"
 
